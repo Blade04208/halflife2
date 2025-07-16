@@ -17,38 +17,40 @@
     --font-primary: Verdana;
     --font-header: Futura Condensed Light;
     --text-primary: var(--hl2-text-color) !important;
-    --brand-500: var(--text-primary) !important;
-    --blurple-26: var(--text-primary) !important;
-    --blurple-35: var(--text-primary) !important;
-    --brand-360: var(--text-primary) !important;
-    --blurple-40: var(--text-primary) !important;
-    --blurple-50: var(--text-primary) !important;
-    --blurple-60: var(--channel-icon) !important;
-    --blurple-70: var(--channel-icon) !important;
+    --brand-500: var(--hl2-text-color) !important;
+    --blurple-26: var(--hl2-text-color) !important;
+    --blurple-35: var(--hl2-text-color) !important;
+    --brand-360: var(--hl2-text-color) !important;
+    --blurple-40: var(--hl2-text-color) !important;
+    --blurple-50: var(--hl2-text-color) !important;
+    --blurple-60: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
+    --blurple-70: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
+    --button-filled-brand-background-hover: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
 }
 
 :root {
     --hl2-text-color: #ffc934;
-    --hl2-bg: url(https://images.steamusercontent.com/ugc/44567523600622881/AD6BDCC85B7405EB625B237C0360E55C5BEEEB40/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false)
+    --hl2-bg: url(https://blade04208.github.io/halflife2/src/bg.png);
 }
 
-.sidebar_c48ade {
+.sidebar_c48ade, .root__49fc1 {
     --text-primary: var(--hl2-text-color) !important;
-    --text-default: var(--text-primary) !important;
-    --icon-primary: var(--text-primary) !important;
-    --channel-icon: color-mix(in srgb, var(--text-primary), transparent 25%) !important;
-    --text-tertiary: color-mix(in srgb, var(--text-primary), transparent 25%) !important;
-    --icon-tertiary: color-mix(in srgb, var(--text-primary), transparent 25%) !important;
-    --icon-secondary: color-mix(in srgb, var(--text-primary), transparent 15%) !important;
-    --interactive-normal: var(--text-primary) !important;
-    --channels-default: color-mix(in srgb, var(--text-primary), transparent 25%) !important;
+    --text-default: var(--hl2-text-color) !important;
+    --header-primary: var(--hl2-text-color) !important;
+    --icon-primary: var(--hl2-text-color) !important;
+    --channel-icon: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
+    --text-tertiary: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
+    --icon-tertiary: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
+    --icon-secondary: color-mix(in srgb, var(--hl2-text-color), transparent 15%) !important;
+    --interactive-normal: var(--hl2-text-color) !important;
+    --channels-default: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
 }
 
 .modeSelected__2ea32 .link__2ea32 {
 
     .icon__2ea32,
     .name__2ea32 {
-        filter: drop-shadow(0px 0px 10px var(--text-primary));
+        filter: drop-shadow(0px 0px 10px var(--hl2-text-color));
     }
 }
 
@@ -62,7 +64,7 @@
 }
 
 .standardSidebarView__23e6b {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .content_c48ade {
@@ -77,10 +79,36 @@
 .wrapper__44df5,
 .prompt__5d7c9,
 .mainCard_f369db {
-    border-radius: 12px !important;
+    border-radius: 12px;
     background: rgba(0, 0, 0, 0.4) !important;
     border: 0px;
     backdrop-filter: saturate(80%) brightness(80%);
+}
+
+.stackedBars__74017 {
+    background: rgba(0, 0, 0, 0.4) !important;
+}
+
+.buttonsInner__5126c, .root__49fc1 {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid color-mix(in srgb, var(--hl2-text-color), transparent 50%);
+    border-radius: 0px!important;
+}
+
+.button__6af3a, .button__201d5:not(.attachButton__74017), .button__24af7, .emojiButton__04eed {
+    border: 1px solid color-mix(in srgb, var(--hl2-text-color), transparent 50%)!important;
+    border-radius: 0px!important; 
+    color: var(--hl2-text-color)!important; 
+    &.primary__6af3a, &.colorBrand__201d5:not(.lookBlank__201d5) {
+        color: black!important;
+    }
+}
+
+.buttons__74017>.button__201d5, .buttons__74017>.expression-picker-chat-input-button>.button__201d5:not(.emojiButton__04eed) {
+    border: none!important;
+}
+.input__0f084, .bioTextAreaContainer__6a919, .select__3f413 {
+    border-radius: 0px!important;
 }
 
 .privateChannels__35e86,
@@ -107,7 +135,7 @@
 .wrapper_d852db,
 .wrapper_fc8177,
 .pageBody__41ed7,
-.container_f369db {
+.container_f369db, .footer__49fc1 {
     background: transparent !important;
     border: 0px !important;
 }
@@ -145,7 +173,7 @@
             font-family: Futura Condensed Light;
             font-weight: 200 !important;
             letter-spacing: 1px;
-            filter: drop-shadow(0px 0px 10px var(--text-primary));
+            filter: drop-shadow(0px 0px 10px var(--hl2-text-color));
         }
     }
 
@@ -158,7 +186,7 @@
 
         .subtext__339d0 {
             text-transform: uppercase;
-            color: var(--text-primary);
+            color: var(--hl2-text-color);
             font-weight: bold;
             opacity: 0.8;
         }
@@ -193,7 +221,7 @@
 
 .sidebar__23e6b::before {
     font-family: K12HL2;
-    content: "H'LF-CORD 2";
+    content: "H'LF -CORD 2";
     color: white;
     font-size: 48px;
 }
@@ -300,7 +328,7 @@
         .wrapper__44b0c,
         .miscContainer_ac6cb0,
         .username__71961 {
-            filter: drop-shadow(0px 0px 2px var(--text-primary));
+            filter: drop-shadow(0px 0px 2px var(--hl2-text-color));
         }
     }
 
@@ -369,4 +397,41 @@
 
 .scroller__99e7c {
     margin: 0px;
+}
+
+
+
+.content_a2f514 {
+    border-radius: 12px !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 0px;
+    backdrop-filter: saturate(80%) brightness(80%);
+    padding: 20px 30px;
+}
+
+.tipTitle_a2f514 {
+    font-size: 0px;
+    margin: 0px;
+
+    &::after {
+        content: "LOADING";
+        color: var(--hl2-text-color);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+.tip_a2f514,
+.spinner_a2f514 {
+    display: none;
+}
+
+div.text_a2f514 {
+    top: unset;
+    justify-content: center;
+}
+
+.container_a2f514 {
+    background: var(--hl2-bg);
 }
