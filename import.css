@@ -26,6 +26,7 @@
     --blurple-60: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
     --blurple-70: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
     --button-filled-brand-background-hover: color-mix(in srgb, var(--hl2-text-color), transparent 25%) !important;
+--background-message-highlight: color-mix(in srgb, var(--hl2-text-color), transparent 90%) !important;
 }
 
 :root {
@@ -33,7 +34,8 @@
     --hl2-bg: url(https://blade04208.github.io/halflife2/src/bg.png);
 }
 
-.sidebar_c48ade, .root__49fc1 {
+.sidebar_c48ade,
+.root__49fc1, .title_f75fb0 {
     --text-primary: var(--hl2-text-color) !important;
     --text-default: var(--hl2-text-color) !important;
     --header-primary: var(--hl2-text-color) !important;
@@ -89,26 +91,37 @@
     background: rgba(0, 0, 0, 0.4) !important;
 }
 
-.buttonsInner__5126c, .root__49fc1 {
+.buttonsInner__5126c,
+.root__49fc1, .itemCard__7e549, .searchBar__5ec2f, .actionButton_f8fa06, .menu_c1e9c4 {
     background: rgba(0, 0, 0, 0.4) !important;
     border: 1px solid color-mix(in srgb, var(--hl2-text-color), transparent 50%);
-    border-radius: 0px!important;
+    border-radius: 0px !important;
+        color: var(--hl2-text-color);
 }
 
-.button__6af3a, .button__201d5:not(.attachButton__74017), .button__24af7, .emojiButton__04eed {
-    border: 1px solid color-mix(in srgb, var(--hl2-text-color), transparent 50%)!important;
-    border-radius: 0px!important; 
-    color: var(--hl2-text-color)!important; 
-    &.primary__6af3a, &.colorBrand__201d5:not(.lookBlank__201d5) {
-        color: black!important;
+.button__6af3a,
+.button__201d5:not(.attachButton__74017, .addButton__29444),
+.button__24af7,
+.emojiButton__04eed {
+    border: 1px solid color-mix(in srgb, var(--hl2-text-color), transparent 50%) !important;
+    border-radius: 0px !important;
+    color: var(--hl2-text-color) !important;
+
+    &.primary__6af3a,
+    &.colorBrand__201d5:not(.lookBlank__201d5) {
+        color: black !important;
     }
 }
 
-.buttons__74017>.button__201d5, .buttons__74017>.expression-picker-chat-input-button>.button__201d5:not(.emojiButton__04eed) {
-    border: none!important;
+.buttons__74017>.button__201d5,
+.buttons__74017>.expression-picker-chat-input-button>.button__201d5:not(.emojiButton__04eed) {
+    border: none !important;
 }
-.input__0f084, .bioTextAreaContainer__6a919, .select__3f413 {
-    border-radius: 0px!important;
+
+.input__0f084,
+.bioTextAreaContainer__6a919,
+.select__3f413 {
+    border-radius: 0px !important;
 }
 
 .privateChannels__35e86,
@@ -135,7 +148,10 @@
 .wrapper_d852db,
 .wrapper_fc8177,
 .pageBody__41ed7,
-.container_f369db, .footer__49fc1 {
+.container_f369db,
+.footer__49fc1,
+.nowPlayingColumn__133bf,
+.container__7d20c, .container__34c2c {
     background: transparent !important;
     border: 0px !important;
 }
